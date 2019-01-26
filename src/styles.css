@@ -113,6 +113,7 @@ main .title {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1.5em;
+    /* grid-auto-rows: minmax(100px, auto); */
 }
 
 .sectionGrid section {
@@ -121,15 +122,23 @@ main .title {
 
 .sectionGrid section img{
     height: 100%;
-    
 }
 
 .topLeft {
     position: absolute;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
     top: 60%;
     left: 16px;
     font-size: 18px;
     color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+}
+
+.thumbUp {
+    
+}
+
+.thumbDown {
+
 }
