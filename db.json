@@ -1,15 +1,74 @@
 {
-    "posts": [{
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-    }],
-    "comments": [{
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-    }],
-    "profile": {
-        "name": "typicode"
-    }
+    "person": [
+        {
+            "id": 1,
+            "name": "Kanye West",
+            "img": "./img/kanye.jpg",
+            "lastUpdate": {
+                "time": "1 month ago",
+                "section": "in Entertainment"
+            },
+            "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
+            "vote": "Vote now"
+        },
+        {
+            "id": 2,
+            "name": "Mark Zuckerberg",
+            "img": "./img/mark.jpg",
+            "lastUpdate": {
+                "time": "1 month ago",
+                "section": "in Business"
+            },
+            "description": "Thank you for voting!",
+            "vote": "Vote again"
+        },
+        {
+            "id": 3,
+            "name": "Cristina Fernández de Kirchner",
+            "img": "./img/cristina.jpg",
+            "lastUpdate": {
+                "time": "1 month ago",
+                "section": "in Politics"
+            },
+            "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
+            "vote": "Vote now"
+        },
+        {
+            "id": 4,
+            "name": "Malala Yousafzai",
+            "img": "./img/malala.jpg",
+            "lastUpdate": {
+                "time": "1 month ago",
+                "section": "in Entertainment"
+            },
+            "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
+            "vote": "Vote now"
+        }
+    ],
+    "surveys": [
+        {
+            "id": 1,
+            "personId": 1,
+            "goodVotes": 3,
+            "badVotes": 7
+        },
+        {
+            "id": 2,
+            "personId": 2,
+            "goodVotes": 4,
+            "badVotes": 6
+        },
+        {
+            "id": 3,
+            "personId": 3,
+            "goodVotes": 5,
+            "badVotes": 5
+        },
+        {
+            "id": 4,
+            "personId": 4,
+            "goodVotes": 6,
+            "badVotes": 4
+        }
+    ]
 }
