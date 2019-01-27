@@ -30,11 +30,24 @@ body {
 }
 
 .greyColor {
-    color: #8d8d8d;
+    /* color: #8d8d8d; */
+    color: rgb(184, 184, 184);
+}
+.greyDark {
+    /* color: #8d8d8d; */
+    color: rgb(107, 107, 107);
+}
+.greyDarkest {
+    /* color: #8d8d8d; */
+    color: rgb(75, 75, 75);
 }
 
 .blackColor {
     color: #313131;
+}
+
+.whiteColor {
+    color: rgb(240, 240, 240);
 }
 
 header {
@@ -51,9 +64,7 @@ header {
 }
 
 .menuBar span {
-    color: rgb(240, 240, 240);
     font-size: 2em;
-    /* font-size: 3vw; */
 }
 
 .menuOptions {
@@ -96,7 +107,7 @@ header {
 }
 
 .info .description {
-    padding: 1.5em;
+    padding: 1em;
 }
 
 .info span {
@@ -188,7 +199,6 @@ main .title {
 
 .surveyGrid>* {
     width: 100%;
-    color: rgb(240, 240, 240);
 }
 
 .surveyGrid .lastVote {
@@ -251,7 +261,7 @@ main .title {
 .surveyGrid .vote {
     grid-column: 4 / 7;
     grid-row: 4;
-    background: rgba(0, 0, 0, 0);
+    background: transparent;
     border: 1px solid white;
     color: white;
     font-size: 0.8em;
@@ -289,7 +299,6 @@ main .title {
 }
 
 .surveyGrid .percentageBar .center {
-    color: rgba(240, 240, 240, 1);
     font-size: 2em;
     z-index: 1;
 }
@@ -299,12 +308,129 @@ main .title {
     padding: 0.3em;
 }
 
-
-
-
-.surveyBanner {
+.bannerSurvey {
     position: absolute;
     top: 30%;
-    left: 0;
-    background: rgba(114, 114, 114, .9);
+    width: 31em;
+    height: 30em;
+    /* filter: blur(5px); */
+    /* border: 1px solid black; */
+}
+
+.bannerSurvey .bannerText {
+    background: rgba(71, 71, 71, .7);
+    height: 60%;
+    padding: 3em 5em 3em 2em;
+}
+
+.bannerSurvey .bannerIcons .thumbUp {
+    width: 50%;
+    height: 7em;
+    background: rgba(14, 141, 124, .8);
+}
+.bannerSurvey .bannerIcons .thumbDown {
+    width: 50%;
+    height: 7em;
+    background: rgba(240, 186, 7, .8);  
+}
+
+.bannerSurvey .thumbUp i, .bannerSurvey .thumbDown i {
+    font-size: 3.3em;
+}
+
+.bannerSurvey .bannerText .text1 {
+    font-size: 1em;
+}
+
+.bannerSurvey .bannerText .text2 {
+    font-size: 3em;
+    letter-spacing: 0.05em;
+    padding-bottom: 0.5em;
+}
+
+.bannerSurvey .bannerText .text3 {
+    font-size: 1.3em;
+    padding-bottom: 1em;
+}
+
+.bannerSurvey .bannerText .text4 {
+    font-size: 1em;
+    padding-bottom: 2em;
+}
+
+.bannerSurvey .bannerText .text5 {
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.banner {
+    overflow: hidden;
+    height: 45em;
+}
+
+
+
+
+
+.addName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5em;
+    height: 5em;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url(img/street.jpg);
+    background-position: center;
+    padding: 0 1em;
+    color: rgb(107, 107, 107);
+    margin-bottom: 2.5em;
+}
+
+.addName .submit {
+    border: 0.15em solid;
+    font-size: 1.3em;
+    padding: 0.5em 1.3em;
+    background: transparent;
+    font-weight: bold;
+}
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3em 0;
+    font-size: 0.8em;
+    border-top: 0.2em dotted;
+}
+
+footer .footer1 {
+    display: flex;
+}
+
+footer .footer2 {
+    display: flex;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer .footer1 li {
+    padding-right: 2em;
+}
+
+footer .footer2 li {
+    padding-left: 2em;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: inherit;
 }
