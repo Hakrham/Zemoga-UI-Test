@@ -123,10 +123,6 @@ header {
     margin: auto;
 }
 
-.info i:hover {
-    cursor: pointer;
-}
-
 .info i {
     font-size: 2em;
 }
@@ -241,6 +237,14 @@ main .title {
     font-size: 1.7em;
 }
 
+.thumbIcon, button:hover {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    cursor: pointer
+}
+
 .surveyGrid .thumbUp input,
 .surveyGrid .thumbDown input {
     display: none;
@@ -308,9 +312,13 @@ main .title {
     padding: 0.3em;
 }
 
+
+
+
+
 .bannerSurvey {
     position: absolute;
-    top: 30%;
+    top: 10em;
     width: 31em;
     height: 30em;
     /* filter: blur(5px); */
