@@ -13,8 +13,28 @@ body {
     margin: 0 10%;
 }
 
-img {
-    width: 100%;
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.greyColor {
+    color: #8d8d8d;
+}
+
+.blackColor {
+    color: #313131;
 }
 
 header {
@@ -61,14 +81,6 @@ header {
     padding: 0em 1em;
     text-decoration: none;
     flex-grow: 1;
-}
-
-.greyColor {
-    color: #8d8d8d;
-}
-
-.blackColor {
-    color: #313131;
 }
 
 .menuItem i {
@@ -120,6 +132,7 @@ main .title {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
     grid-auto-rows: 1fr;
+    align-items: end;
 }
 
 .gridElement {
@@ -149,39 +162,48 @@ main .title {
 
 .surveyInfo {
     position: absolute;
-    top: 52.4%;
+    z-index: 2;
+    top: 0;
     left: 0;
-    color: rgb(240, 240, 240);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, .6));
+}
+
+.surveyContainer {
+    width: 100%;
+    height: 100%;
 }
 
 .surveyGrid {
+    /* position: relative; */
     width: 100%;
-    height: 100%;
+    height: 60%;
     display: grid;
     grid-column-gap: 0.7em;
     grid-template-columns: repeat(12, 1fr);
-    background: rgba(0, 0, 0, .3);
+    grid-template-rows: 8em 1.7em 4em 3em;
+    /* grid-row-gap: 1em; */
 }
 
-.surveyGrid > * {
+.surveyGrid>* {
     width: 100%;
     color: rgb(240, 240, 240);
 }
 
-.surveyGrid span {
+.surveyGrid .lastVote {
     grid-column: 1;
-    grid-row: 1; 
+    grid-row: 1;
 }
 
-.surveyGrid h1 {
+.surveyGrid .personName {
     grid-column: 2 / 13;
     grid-row: 1;
+    align-self: end;
     font-size: 3em;
-    font-weight: normal;
-    /* background: yellow; */
 }
 
-.surveyGrid .date {
+.surveyGrid .lastUpdate {
     grid-column: 2 / 13;
     grid-row: 2;
     font-size: 0.8em;
@@ -190,7 +212,6 @@ main .title {
 .surveyGrid .description {
     grid-column: 2 / 12;
     grid-row: 3;
-    padding: 1.2em 0em;
     font-size: 1em;
 }
 
@@ -210,14 +231,9 @@ main .title {
     font-size: 1.7em;
 }
 
-.surveyGrid .thumbUp input, .surveyGrid .thumbDown input {
+.surveyGrid .thumbUp input,
+.surveyGrid .thumbDown input {
     display: none;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .surveyGrid .thumbDown {
@@ -239,6 +255,7 @@ main .title {
     border: 1px solid white;
     color: white;
     font-size: 0.8em;
+    height: 2.5em;
 }
 
 .surveyGrid .percentageBar {
@@ -247,12 +264,13 @@ main .title {
     grid-row: 5;
     width: 100%;
     height: 3em;
-    margin-top: 2em;
+    /* margin-top: 1em; */
     display: flex;
     justify-content: space-between;
+    align-self: end;
 }
 
-.percentageBar .goodVotes {
+.surveyGrid .percentageBar .goodVotes {
     position: absolute;
     top: 0;
     left: 0;
@@ -260,7 +278,8 @@ main .title {
     height: 100%;
     background: rgba(14, 141, 124, .7);
 }
-.percentageBar .badVotes {
+
+.surveyGrid .percentageBar .badVotes {
     position: absolute;
     top: 0;
     left: 63%;
@@ -280,21 +299,12 @@ main .title {
     padding: 0.3em;
 }
 
-/* 
-.topLeft {
-    background-color: red;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    font-size: 1em;
-    color: white;
-    color: black;
-    grid-auto-rows: 100px;
+
+
+
+.surveyBanner {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    background: rgba(114, 114, 114, .9);
 }
-
-.thumbUp {
-    
-}
-
-.thumbDown {
-
-} */

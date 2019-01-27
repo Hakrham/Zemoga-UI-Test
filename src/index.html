@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Title and Top Menu  -->
     <header>
         <div class="menuBar content">
             <span>Rule of Thumb.</span>
@@ -25,239 +26,200 @@
             </nav>
         </div>
     </header>
-    <img src="./img/popeFrancis.jpg" alt="Pope Francis">
+    <img width="100%" src="./img/popeFrancis.jpg" alt="Pope Francis">
+    <!-- <div class="bannerSurvey">
+            
+        </div>         -->
+
+    <!-- Info About Rule of Thumb -->
     <div class="info content greyColor">
         <div class="description"><span>Speak out. Be heard.</span><br><b class="blackColor">Be counted</b></div>
         <div>Rule of Thumb is a crowd sourced court opinion where anyone and everyone can speak out and speak freely.
             It's easy: You share your opinion, we analyze and put the data in a public report.</div>
         <div class="close"><i class="material-icons">close</i></div>
     </div>
+
+    <!-- Active Surveys -->
     <main class="content">
         <span class="title blackColor">Votes</span>
-        <!-- <div class="sectionGrid">
-            <section>
-                <div class="imgSection">
-                    <img src="img/kanye.jpg" alt="">
-                </div>
-                <div class="topLeft">
-                    <span><i class="material-icons">thumb_up</i></span>
-                    <h1>Kanye West</h1>
-                    <p class="date"><b>1 month ago</b> in Entertainment</p>
-                    <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit
-                        libero</p>
-                    <span class="thumbUp"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i class="material-icons">thumb_up</i></label></span>
-                    <span class="thumbDown"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                class="material-icons">thumb_down</i></label></span>
-                    <button class="vote">Vote now</button>
-                </div>
-            </section>
-            <section>
-                <div class="imgSection">
-                    <img src="img/mark.jpg" alt="">
-                </div>
-                <div class="topLeft">
-                    <span><i class="material-icons">thumb_up</i></span>
-                    <h1>Kanye West</h1>
-                    <p class="date"><b>1 month ago</b> in Entertainment</p>
-                    <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit
-                        libero</p>
-                    <span class="thumbUp"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i class="material-icons">thumb_up</i></label></span>
-                    <span class="thumbDown"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                class="material-icons">thumb_down</i></label></span>
-                    <button class="vote">Vote now</button>
-                </div>
-
-            </section>
-            <section>
-                <div class="imgSection">
-                    <img src="img/cristina.jpg" alt="">
-                </div>
-                <div class="topLeft">
-                    <span><i class="material-icons">thumb_up</i></span>
-                    <h1>Kanye West</h1>
-                    <p class="date"><b>1 month ago</b> in Entertainment</p>
-                    <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit
-                        libero</p>
-                    <span class="thumbUp"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i class="material-icons">thumb_up</i></label></span>
-                    <span class="thumbDown"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                class="material-icons">thumb_down</i></label></span>
-                    <button class="vote">Vote now</button>
-                </div>
-
-            </section>
-            <section>
-                <div class="imgSection">
-                    <img src="img/malala.jpg" alt="">
-                </div>
-                <div class="topLeft">
-                    <span><i class="material-icons">thumb_up</i></span>
-                    <h1>Kanye West</h1>
-                    <p class="date"><b>1 month ago</b> in Entertainment</p>
-                    <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit
-                        libero</p>
-                    <span class="thumbUp"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i class="material-icons">thumb_up</i></label></span>
-                    <span class="thumbDown"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                class="material-icons">thumb_down</i></label></span>
-                    <button class="vote">Vote now</button>
-                </div>
-
-            </section>
-        </div> -->
         <div class="sectionGrid">
+            <!-- Kanye West -->
             <section class="gridElement">
                 <div class="sectionImg">
                     <img src="img/kanye.jpg" alt="">
                 </div>
                 <div class="surveyInfo">
-                    <div class="surveyGrid">
-                        <span class="center">
-                            <span class="thumbUp center">
-                                <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
-                            </span>
-                            <span class="thumbDown center" style="display:none;">
-                                <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
-                            </span>
-                        </span>
-                        <h1>Kanye West</h1>
-                        <p class="date"><b>1 month ago</b> in Entertainment</p>
-                        <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu
-                            velit
-                            libero</p>
-                        <span class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
-                                    class="material-icons thumbIcon">thumb_up</i></label></span>
-                        <span class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                    class="material-icons thumbIcon">thumb_down</i></label></span>
-                        <button class="vote">Vote now</button>
-                        <div class="percentageBar">
-                            <div class="goodVotes"></div>
-                            <div class="badVotes"></div>
-                            <span class="center">
-                                    <i class="material-icons">thumb_up</i><span>63%</span>
-                            </span>
-                            <span class="center">
-                                    <span>37%</span> <i class="material-icons">thumb_down</i>
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="gridElement">
-                    <div class="sectionImg">
-                        <img src="img/kanye.jpg" alt="">
-                    </div>
-                    <div class="surveyInfo">
+                    <div class="surveyContainer bottom">
                         <div class="surveyGrid">
-                            <span class="center">
+                            <div class="lastVote bottom">
                                 <span class="thumbUp center">
                                     <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
                                 </span>
                                 <span class="thumbDown center" style="display:none;">
                                     <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
                                 </span>
-                            </span>
-                            <h1>Kanye West</h1>
-                            <p class="date"><b>1 month ago</b> in Entertainment</p>
-                            <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu
-                                velit
-                                libero</p>
-                            <span class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
-                                        class="material-icons thumbIcon">thumb_up</i></label></span>
-                            <span class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                        class="material-icons thumbIcon">thumb_down</i></label></span>
+                            </div>
+                            <div class="personName bottom"><span>Kanye West</span></div>
+                            <div class="lastUpdate"><span><b>1 month ago</b> in Entertainment</span></div>
+                            <div class="description top">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi tempora est molestias illo, neque facilis?</p>
+                            </div>
+                            <div class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
+                                        class="material-icons thumbIcon">thumb_up</i></label></div>
+                            <div class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label
+                                    for="voteDown"><i class="material-icons thumbIcon">thumb_down</i></label></div>
                             <button class="vote">Vote now</button>
                             <div class="percentageBar">
                                 <div class="goodVotes"></div>
                                 <div class="badVotes"></div>
-                                <span class="center">
-                                        <i class="material-icons">thumb_up</i><span>63%</span>
-                                </span>
-                                <span class="center">
-                                        <span>37%</span> <i class="material-icons">thumb_down</i>
-                                </span>
-    
+                                <div class="center">
+                                    <i class="material-icons">thumb_up</i>
+                                    <div>63%</div>
+                                </div>
+                                <div class="center">
+                                    <div>37%</div> <i class="material-icons">thumb_down</i>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="gridElement">
-                        <div class="sectionImg">
-                            <img src="img/kanye.jpg" alt="">
-                        </div>
-                        <div class="surveyInfo">
-                            <div class="surveyGrid">
-                                <span class="center">
-                                    <span class="thumbUp center">
-                                        <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
-                                    </span>
-                                    <span class="thumbDown center" style="display:none;">
-                                        <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
-                                    </span>
+                </div>
+            </section>
+            <!-- Mark Zuckerberg -->
+            <section class="gridElement">
+                <div class="sectionImg">
+                    <img src="img/mark.jpg" alt="">
+                </div>
+                <div class="surveyInfo">
+                    <div class="surveyContainer bottom">
+                        <div class="surveyGrid">
+                            <div class="lastVote bottom">
+                                <span class="thumbUp center">
+                                    <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
                                 </span>
-                                <h1>Kanye West</h1>
-                                <p class="date"><b>1 month ago</b> in Entertainment</p>
-                                <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu
-                                    velit
-                                    libero</p>
-                                <span class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
-                                            class="material-icons thumbIcon">thumb_up</i></label></span>
-                                <span class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                            class="material-icons thumbIcon">thumb_down</i></label></span>
-                                <button class="vote">Vote now</button>
-                                <div class="percentageBar">
-                                    <div class="goodVotes"></div>
-                                    <div class="badVotes"></div>
-                                    <span class="center">
-                                            <i class="material-icons">thumb_up</i><span>63%</span>
-                                    </span>
-                                    <span class="center">
-                                            <span>37%</span> <i class="material-icons">thumb_down</i>
-                                    </span>
-        
+                                <span class="thumbDown center" style="display:none;">
+                                    <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
+                                </span>
+                            </div>
+                            <div class="personName bottom"><span>Mark Zuckerberg</span></div>
+                            <div class="lastUpdate"><span><b>1 month ago</b> in Business</span></div>
+                            <div class="description top">
+                                <p>Thank you for voting!</p>
+                            </div>
+                            <div class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
+                                        class="material-icons thumbIcon">thumb_up</i></label></div>
+                            <div class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label
+                                    for="voteDown"><i class="material-icons thumbIcon">thumb_down</i></label></div>
+                            <button class="vote">Vote again</button>
+                            <div class="percentageBar">
+                                <div class="goodVotes"></div>
+                                <div class="badVotes"></div>
+                                <div class="center">
+                                    <i class="material-icons">thumb_up</i>
+                                    <div>63%</div>
                                 </div>
+                                <div class="center">
+                                    <div>37%</div> <i class="material-icons">thumb_down</i>
+                                </div>
+
                             </div>
                         </div>
-                    </section>
-                    <section class="gridElement">
-                            <div class="sectionImg">
-                                <img src="img/kanye.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- Cristina Fernández -->
+            <section class="gridElement">
+                <div class="sectionImg">
+                    <img src="img/cristina.jpg" alt="">
+                </div>
+                <div class="surveyInfo">
+                    <div class="surveyContainer bottom">
+                        <div class="surveyGrid">
+                            <div class="lastVote bottom">
+                                <span class="thumbUp center">
+                                    <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
+                                </span>
+                                <span class="thumbDown center" style="display:none;">
+                                    <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
+                                </span>
                             </div>
-                            <div class="surveyInfo">
-                                <div class="surveyGrid">
-                                    <span class="center">
-                                        <span class="thumbUp center">
-                                            <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
-                                        </span>
-                                        <span class="thumbDown center" style="display:none;">
-                                            <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
-                                        </span>
-                                    </span>
-                                    <h1>Kanye West</h1>
-                                    <p class="date"><b>1 month ago</b> in Entertainment</p>
-                                    <p class="description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu
-                                        velit
-                                        libero</p>
-                                    <span class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
-                                                class="material-icons thumbIcon">thumb_up</i></label></span>
-                                    <span class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label for="voteDown"><i
-                                                class="material-icons thumbIcon">thumb_down</i></label></span>
-                                    <button class="vote">Vote now</button>
-                                    <div class="percentageBar">
-                                        <div class="goodVotes"></div>
-                                        <div class="badVotes"></div>
-                                        <span class="center">
-                                                <i class="material-icons">thumb_up</i><span>63%</span>
-                                        </span>
-                                        <span class="center">
-                                                <span>37%</span> <i class="material-icons">thumb_down</i>
-                                        </span>
-            
-                                    </div>
+                            <div class="personName bottom"><span>Cristina Fernández de Kirchner</span></div>
+                            <div class="lastUpdate"><span><b>1 month ago</b> in Politics</span></div>
+                            <div class="description top">
+                                <p>Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero</p>
+                            </div>
+                            <div class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
+                                        class="material-icons thumbIcon">thumb_up</i></label></div>
+                            <div class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label
+                                    for="voteDown"><i class="material-icons thumbIcon">thumb_down</i></label></div>
+                            <button class="vote">Vote now</button>
+                            <div class="percentageBar">
+                                <div class="goodVotes"></div>
+                                <div class="badVotes"></div>
+                                <div class="center">
+                                    <i class="material-icons">thumb_up</i>
+                                    <div>63%</div>
                                 </div>
+                                <div class="center">
+                                    <div>37%</div> <i class="material-icons">thumb_down</i>
+                                </div>
+
                             </div>
-                        </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Malala Yousafzai -->
+            <section class="gridElement">
+                <div class="sectionImg">
+                    <img src="img/malala.jpg" alt="">
+                </div>
+                <div class="surveyInfo">
+                    <div class="surveyContainer bottom">
+                        <div class="surveyGrid">
+                            <div class="lastVote bottom">
+                                <span class="thumbUp center">
+                                    <i class="material-icons thumbIcon" id="thumbUp">thumb_up</i>
+                                </span>
+                                <span class="thumbDown center" style="display:none;">
+                                    <i class="material-icons thumbIcon" id="thumbDown">thumb_down</i>
+                                </span>
+                            </div>
+                            <div class="personName bottom"><span>Malala Yousafzai</span></div>
+                            <div class="lastUpdate"><span><b>1 month ago</b> in Entertainment</span></div>
+                            <div class="description top">
+                                <p>Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero</p>
+                            </div>
+                            <div class="thumbUp center"><input type="checkbox" name="voteUp" id="voteUp"><label for="voteUp"><i
+                                        class="material-icons thumbIcon">thumb_up</i></label></div>
+                            <div class="thumbDown center"><input type="checkbox" name="voteDown" id="voteDown"><label
+                                    for="voteDown"><i class="material-icons thumbIcon">thumb_down</i></label></div>
+                            <button class="vote">Vote now</button>
+                            <div class="percentageBar">
+                                <div class="goodVotes"></div>
+                                <div class="badVotes"></div>
+                                <div class="center">
+                                    <i class="material-icons">thumb_up</i>
+                                    <div>63%</div>
+                                </div>
+                                <div class="center">
+                                    <div>37%</div> <i class="material-icons">thumb_down</i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <!-- Add a Name -->
+    <div class="addName content">
+        <div>Is there anyone else you wuold want us to add?</div>
+        <div><button class="submit">Submit a Name</button></div>
+    </div>
+
     <footer class="content">
         <ul>
             <li><a href="#">Terms and Conditions</a></li>
