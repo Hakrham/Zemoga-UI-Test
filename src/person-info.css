@@ -1,3 +1,40 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.greyColor {
+    /* color: #8d8d8d; */
+    color: rgb(184, 184, 184);
+}
+.greyDark {
+    /* color: #8d8d8d; */
+    color: rgb(107, 107, 107);
+}
+.greyDarkest {
+    /* color: #8d8d8d; */
+    color: rgb(75, 75, 75);
+}
+
+.blackColor {
+    color: #313131;
+}
+
+.whiteColor {
+    color: rgb(240, 240, 240);
+}
+
 .gridElement {
     width: 100%;
     padding-top: 115%;
@@ -56,6 +93,10 @@
 .surveyGrid .lastVote {
     grid-column: 1;
     grid-row: 1;
+}
+
+.noDisplay {
+    display: none;
 }
 
 .surveyGrid .personName {

@@ -127,6 +127,8 @@ header {
     font-size: 2em;
 }
 
+/* **************************************** */
+
 main .title {
     display: block;
     font-size: 2.5em;
@@ -166,6 +168,8 @@ main .title {
     height: 100%;
     width: auto;
 }
+
+/* **************************************** */
 
 .surveyInfo {
     position: absolute;
@@ -312,9 +316,7 @@ main .title {
     padding: 0.3em;
 }
 
-
-
-
+/* **************************************** */
 
 .bannerSurvey {
     position: absolute;
@@ -377,9 +379,7 @@ main .title {
     height: 45em;
 }
 
-
-
-
+/* **************************************** */
 
 .addName {
     display: flex;
@@ -404,9 +404,7 @@ main .title {
     font-weight: bold;
 }
 
-
-
-
+/* **************************************** */
 
 footer {
     display: flex;

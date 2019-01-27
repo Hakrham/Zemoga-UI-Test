@@ -12,8 +12,7 @@ function fetchSurveys() {
         .then((json) => {
             for (const person of json) {
                 const el = document.createElement('person-info');
-                console.log(person);
-                el.person = person;
+                el.obj = person;
                 document.querySelector('.sectionGrid').appendChild(el);
             }
         });
