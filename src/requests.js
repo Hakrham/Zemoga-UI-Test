@@ -1,3 +1,5 @@
-const persons = 'http://localhost:3000/person/';
+const getPersons = 'http://localhost:3000/person/';
+const getStats = 'http://localhost:3000/stats?idPerson=';
+const setStats = 'http://localhost:3000/person/';
 
-export { persons };
+export { getPersons, getStats, setStats };

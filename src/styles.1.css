@@ -9,6 +9,16 @@ body {
 
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.info .close:hover {
+    cursor: pointer;
+}
+
+
+
 .content {
     margin: 0 10%;
 }
@@ -64,7 +74,7 @@ header {
 }
 
 .menuBar span {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .menuOptions {
@@ -88,6 +98,7 @@ header {
 }
 
 .menuItem {
+    font-size: 1.2em;
     display: block;
     padding: 0em 1em;
     text-decoration: none;
@@ -204,9 +215,19 @@ main .title {
     height: 45em;
 }
 
+.thumbUp {
+    background: rgb(14, 141, 124);
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 0.8em;
+}
 
-
-
+.thumbDown {
+    background: rgb(240, 186, 7);
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 0.8em;
+}
 
 .addName {
     display: flex;
@@ -268,4 +289,146 @@ footer .footer2 li {
 footer ul li a {
     text-decoration: none;
     color: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 2.5vw;
+    }
+    .menuBar span {
+        font-size: 2em;
+    }
+
+    .menuItem {
+        font-size: 1em;
+        display: block;
+        padding: 0em 1em;
+        text-decoration: none;
+        flex-grow: 1;
+    }
+
+    .banner {
+        overflow: hidden;
+        height: 26.25em;
+    }
+
+    .bannerSurvey {
+        font-size: 0.7em;
+        position: absolute;
+        top: 10em;
+        width: 31em;
+        height: 29.4em;
+        margin-left: 14em;
+        /* filter: blur(5px); */
+        /* border: 1px solid black; */
+    }
+
+    .bannerSurvey .bannerIcons {
+        font-size: 0.7em;
+    }
+
+    .info {
+        position: relative;
+        padding: 0em 1em 0.5em 1.2em;
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #dddddd;
+        grid-gap: 1em;
+    }
+    
+    .info .description{
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .info .close {
+        position: absolute;
+        font-size: 0.6em;
+        top: 0.1em;
+        left: 96%;
+    }
+
+    main .title {
+        margin: 0.5em 0;
+    }
+
+    .sectionGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+        grid-auto-rows: 1fr;
+        align-items: end;
+    }
+
+    .addName .submit {
+        border: 0.1em solid;
+        font-size: 1em;
+        padding: 0.5em 1.3em;
+        background: transparent;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        font-size: 2.5vw;
+    }
+
+    header {
+        position: fixed;
+        background: rgba(71, 71, 71, .9);
+        margin:0;
+        z-index: 100;
+    }
+
+    .menuBar span {
+        font-size: 2em;
+    }
+
+    .menuItem {
+        font-size: 1em;
+        display: block;
+        padding: 0em 1em;
+        text-decoration: none;
+        flex-grow: 1;
+    }
+
+    .banner img {
+        display: none;
+    }
+
+    .bannerSurvey .bannerText {
+        background: rgba(71, 71, 71, .7);
+        height: 60%;
+        padding: 2em 5em 3em 2em;
+    }
+
+    .bannerSurvey {
+        font-size: 1em;
+        position: absolute;
+        top: 4.6em;
+        width: 30.7em;
+        height: 28em;
+        margin-left: 10%;
+        /* filter: blur(5px); */
+        /* border: 1px solid black; */
+    }
+
+    .bannerSurvey .bannerIcons {
+        font-size: 0.6em;
+    }
+
+    .info {
+        margin-top: 6em;
+    }
+
+    .sectionGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+        grid-auto-rows: 1fr;
+        align-items: end;
+    }
 }
