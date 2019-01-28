@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Kanye West",
-      "img": "./img/kanye.jpg",
+      "img": "./src/img/kanye.jpg",
       "lastUpdate": {
         "time": "1 month ago",
         "section": "in Entertainment"
@@ -12,14 +12,14 @@
       "vote": "Vote now",
       "stats": {
         "goodVotes": 6,
-        "badVotes": 10,
+        "badVotes": 11,
         "lastVoteGood": false
       }
     },
     {
       "id": 2,
       "name": "Mark Zuckerberg",
-      "img": "./img/mark.jpg",
+      "img": "./src/img/mark.jpg",
       "lastUpdate": {
         "time": "1 month ago",
         "section": "in Business"
@@ -35,7 +35,7 @@
     {
       "id": 3,
       "name": "Cristina Fernández de Kirchner",
-      "img": "./img/cristina.jpg",
+      "img": "./src/img/cristina.jpg",
       "lastUpdate": {
         "time": "1 month ago",
         "section": "in Politics"
@@ -43,7 +43,7 @@
       "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
       "vote": "Vote now",
       "stats": {
-        "goodVotes": 7,
+        "goodVotes": 8,
         "badVotes": 6,
         "lastVoteGood": true
       }
@@ -51,7 +51,7 @@
     {
       "id": 4,
       "name": "Malala Yousafzai",
-      "img": "./img/malala.jpg",
+      "img": "./src/img/malala.jpg",
       "lastUpdate": {
         "time": "1 month ago",
         "section": "in Entertainment"
@@ -63,10 +63,6 @@
         "badVotes": 3,
         "lastVoteGood": true
       }
-    },
-    {
-      "name": "jQuery",
-      "id": 5
     }
   ]
 }

@@ -1,5 +1,5 @@
 // import {} from './person-info.html';
-import { setStats } from './requests.js';
+import { setStats } from '../requests.js';
 
     class PersonInfo extends HTMLElement {
         constructor() {
@@ -98,8 +98,8 @@ import { setStats } from './requests.js';
 
             this.root.innerHTML = `
     
-        <link rel="stylesheet" href="fonts.css">
-        <link rel="stylesheet" href="person-info.css">
+        <link rel="stylesheet" href="./src/fonts.css">
+        <link rel="stylesheet" href="./src/person-info/person-info.css">
         <section class="gridElement">
             <div class="sectionImg">
                 <img id="personImg" src="${this._person.img}" alt="${this._person.name}">

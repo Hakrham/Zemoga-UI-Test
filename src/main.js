@@ -1,5 +1,5 @@
 import { getPersons, getStats } from './requests.js';
-import './person-info.js';
+import './person-info/person-info.js';
 window.addEventListener('load', () => {
     fetchPerson();
     document.querySelector('.info .close').addEventListener('click', closeInfo);
