@@ -176,7 +176,7 @@ button:hover {
     grid-column: 4 / 7;
     grid-row: 4;
     background: transparent;
-    border: 1px solid white;
+    border: 0.1em solid white;
     color: white;
     font-size: 0.8em;
     height: 2.5em;
@@ -265,7 +265,7 @@ button:hover {
     }
 
     .surveyGrid .vote {
-        border: 1px solid white;
+        border: 0.1em solid white;
         color: white;
         font-size: 1.4em;
         height: 2.8em;

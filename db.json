@@ -27,9 +27,9 @@
       "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
       "vote": "Vote now",
       "stats": {
-        "goodVotes": 54,
-        "badVotes": 40,
-        "lastVoteGood": true
+        "goodVotes": 5,
+        "badVotes": 7,
+        "lastVoteGood": false
       }
     },
     {
