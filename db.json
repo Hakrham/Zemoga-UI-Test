@@ -11,8 +11,8 @@
       "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
       "vote": "Vote now",
       "stats": {
-        "goodVotes": 7,
-        "badVotes": 13,
+        "goodVotes": 10,
+        "badVotes": 23,
         "lastVoteGood": false
       }
     },

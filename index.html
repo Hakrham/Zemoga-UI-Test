@@ -18,12 +18,16 @@
         <header>
             <div class="menuBar content whiteColor">
                 <span>Rule of Thumb.</span>
-                <nav class="menuOptions">
+                <div class="mobileMenu">
+                    <input type="checkbox" name="mobileButton" id="mobileButton">
+                    <label for="mobileButton"><i class="icon-list2"></i></label>
+                </div>
+                <nav class="menuOptions menuHidden">
                     <ul>
                         <li><a href="./src/menu/past.trials.html" class="menuItem greyColor">Past Trials</a></li>
                         <li><a href="./src/menu/how.it.works.html" class="menuItem greyColor">How It Works</a></li>
                         <li><a href="./src/menu/login.html" class="menuItem greyColor">Log In / Sign Up</a></li>
-                        <li><a href="#" class="menuItem greyColor"><i class="icon-search"></i></a></li>
+                        <a href="#" class="menuItem greyColor"><i class="icon-search"></i></a>
                     </ul>
                 </nav>
             </div>
@@ -46,9 +50,6 @@
                 <div class="thumbUp center pointer"><i class="icon-thumb-up pointer"></i></div>
                 <div class="thumbDown center pointer"><i class="icon-thumb-down pointer"></i></div>
             </div>
-        </div>
-        <div class="bannerEnd">
-
         </div>
     </div>
 

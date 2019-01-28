@@ -3,6 +3,7 @@ import './person-info/person-info.js';
 window.addEventListener('load', () => {
     fetchPerson();
     document.querySelector('.info .close').addEventListener('click', closeInfo);
+    document.getElementById('mobileButton').addEventListener('change', showMenu);
 });
 
 function fetchPerson() {
@@ -26,4 +27,8 @@ function createElement(person) {
 
 function closeInfo (){
     this.parentNode.style.cssText = 'display: none';
+}
+
+function showMenu(){
+    document.querySelector('.menuOptions').classList.toggle('menuHidden');
 }
