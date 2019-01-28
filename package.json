@@ -4,7 +4,8 @@
   "description": "npm init -y",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --env.mode development",
+    "dev": "webpack-dev-server --mode=development",
+    "dev1": "webpack-dev-server --env.mode development",
     "prod": "webpack --env.mode production"
   },
   "keywords": [],

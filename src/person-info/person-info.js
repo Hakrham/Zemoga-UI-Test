@@ -10,7 +10,7 @@ import { setStats } from '../requests.js';
         }
         
         connectedCallback() {
-            this.setComponent();
+            this.setComponent(this._person);
             this.calculateBars();
             this.lastVote();
             this.addListeners();
@@ -21,7 +21,7 @@ import { setStats } from '../requests.js';
 
             // Voting:
             element = this.root.querySelector('.vote');
-            element.addEventListener('click', () => this.voting.call(this, element));
+            element.addEventListener('click', (e) => this.voting.call(this, e.target));
 
             // Style Radios:
             element = this.root.querySelectorAll('#voteUp, #voteDown');
@@ -33,7 +33,9 @@ import { setStats } from '../requests.js';
 
         voting(element){
             const voteUp = this.root.getElementById('voteUp');
-            this.addVote(voteUp.checked, this._person);
+            if (element.innerHTML != 'Vote again')
+                this.addVote(voteUp.checked, this._person);
+            else this.changeSurveyInfo();
         }
 
         radioParentStyle(element) {
@@ -55,25 +57,21 @@ import { setStats } from '../requests.js';
         lastVote() {
             let thumbUp = this.root.querySelector('.lastVote .thumbUp');
             let thumbDown = this.root.querySelector('.lastVote .thumbDown');
-            if (this._person.stats.lastVoteGood) thumbDown.style.cssText = 'display: none';
-            else thumbUp.style.cssText = 'display: none';
+            const show = 'display:flex;align-items:center;justify-content:center;'
+            if (this._person.stats.lastVoteGood) {
+                thumbDown.style.cssText = 'display: none';
+                thumbUp.style.cssText = show;
+            }
+            else {
+                thumbDown.style.cssText = show;
+                thumbUp.style.cssText = 'display: none';
+            }
         }
 
         addVote(voteUp, person) {
-            console.log(person.stats);
             if (voteUp) person.stats.goodVotes++;
             else person.stats.badVotes++;
             person.stats.lastVoteGood = voteUp;
-            console.log(person.stats);
-
-            // var xhttp = new XMLHttpRequest();
-            // xhttp.onreadystatechange = function() {
-            //     alert("finish");
-            // };
-            // xhttp.open("PUT", setStats + stats.id);
-            // xhttp.setRequestHeader("Content-Type", "application/json");
-            // xhttp.send(JSON.stringify(stats));
-
 
             let options = {
                 method: "PUT",
@@ -85,16 +83,70 @@ import { setStats } from '../requests.js';
 
             fetch(setStats + person.id, options)
                 .then(x => {
-                    console.log(x);
                     return x.json();
+                })
+                .then(json => {
+                    this._person = json;
+                    this.render(json);
                 });
         }
-    
-        setComponent (){
 
-            const pGood = Math.floor(this._person.stats.goodVotes * 100
-                / (this._person.stats.goodVotes + this._person.stats.badVotes));
+        render() {
+            this.setPercerntages();
+            this.calculateBars();
+            this.lastVote();
+            this.changeSurveyInfo();
+            alert('Your vote was successfully saved!!');
+        }
+
+        changeSurveyInfo() {
+            let button = this.root.querySelector('.vote');
+            let info = this.root.querySelector('.description p');
+            let thumbs = this.root.querySelectorAll('#voteUp, #voteDown');
+            // const bool = button.innerHTML == 'Vote again';
+
+
+            if (button.innerHTML == 'Vote again') {
+                button.innerHTML = this._person.vote;
+                info.innerHTML = this._person.description;
+            }
+            else {
+                button.innerHTML = 'Vote again';
+                info.innerHTML = 'Thank you for voting!';
+            }
+
+            thumbs.forEach(thumb => {
+                thumb.parentNode.classList.toggle('noDisplay');
+            });
+            
+        }
+
+        setPercerntages() {
+            const p = this.calcPercentages(this._person.stats.goodVotes, this._person.stats.badVotes);
+            let pBars = this.root.querySelector('.percentageBar');
+            pBars.innerHTML = 
+                `
+                    <div class="goodVotes"></div>
+                    <div class="badVotes"></div>
+                    <div class="center">
+                        <i class="icon-thumb-up"></i>
+                        <div>${p.Good}%</div>
+                    </div>
+                    <div class="center">
+                        <div>${p.Bad}%</div> <i class="icon-thumb-down"></i>
+                    </div>
+                `;
+        }
+        
+        calcPercentages(goodVotes, badVotes) {
+            const pGood = Math.floor(goodVotes * 100
+                / (goodVotes + badVotes));
             const pBad = 100 - pGood;
+            return {'Good': pGood, 'Bad': pBad}
+        }
+
+        setComponent (person){
+            const p = this.calcPercentages(person.stats.goodVotes, person.stats.badVotes);
 
             this.root.innerHTML = `
     
@@ -102,7 +154,7 @@ import { setStats } from '../requests.js';
         <link rel="stylesheet" href="./src/person-info/person-info.css">
         <section class="gridElement">
             <div class="sectionImg">
-                <img id="personImg" src="${this._person.img}" alt="${this._person.name}">
+                <img id="personImg" src="${person.img}" alt="${person.name}">
             </div>
             <div class="surveyInfo">
                 <div class="surveyContainer bottom">
@@ -115,31 +167,31 @@ import { setStats } from '../requests.js';
                                 <i class="icon-thumb-down thumbIcon" id="thumbDown"></i>
                             </span>
                         </div>
-                        <div class="personName bottom"><span>${this._person.name}</span></div>
-                        <div class="lastUpdate"><span><b>${this._person.lastUpdate.time}</b> ${this._person.lastUpdate.section}</span></div>
+                        <div class="personName bottom"><span>${person.name}</span></div>
+                        <div class="lastUpdate"><span><b>${person.lastUpdate.time}</b> ${person.lastUpdate.section}</span></div>
                         <div class="description top">
-                            <p>${this._person.description}</p>
+                            <p>${person.description}</p>
                         </div>
                         <div class="thumbUp center checked"><input type="radio" name="vote" value="voteUp" id="voteUp" checked><label for="voteUp"><i class="icon-thumb-up thumbIcon"></i></label></div>
                         <div class="thumbDown center"><input type="radio" name="vote" value="voteDown" id="voteDown"><label
                                 for="voteDown"><i class="icon-thumb-down thumbIcon"></i></label></div>
-                        <button class="vote">${this._person.vote}</button>
+                        <button class="vote">${person.vote}</button>
                         <div class="percentageBar">
                             <div class="goodVotes"></div>
                             <div class="badVotes"></div>
                             <div class="center">
                                 <i class="icon-thumb-up"></i>
-                                <div>${pGood}%</div>
+                                <div>${p.Good}%</div>
                             </div>
                             <div class="center">
-                                <div>${pBad}%</div> <i class="icon-thumb-down"></i>
+                                <div>${p.Bad}%</div> <i class="icon-thumb-down"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="idPerson" class="noDisplay">${this._person.id}</div>
+        <div id="idPerson" class="noDisplay">${person.id}</div>
             `;
             
         }

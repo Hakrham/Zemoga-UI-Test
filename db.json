@@ -11,8 +11,8 @@
       "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
       "vote": "Vote now",
       "stats": {
-        "goodVotes": 6,
-        "badVotes": 11,
+        "goodVotes": 7,
+        "badVotes": 13,
         "lastVoteGood": false
       }
     },
@@ -24,11 +24,11 @@
         "time": "1 month ago",
         "section": "in Business"
       },
-      "description": "Thank you for voting!",
-      "vote": "Vote again",
+      "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
+      "vote": "Vote now",
       "stats": {
-        "goodVotes": 10,
-        "badVotes": 11,
+        "goodVotes": 54,
+        "badVotes": 40,
         "lastVoteGood": true
       }
     },
@@ -43,7 +43,7 @@
       "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
       "vote": "Vote now",
       "stats": {
-        "goodVotes": 8,
+        "goodVotes": 9,
         "badVotes": 6,
         "lastVoteGood": true
       }
@@ -59,9 +59,9 @@
       "description": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero",
       "vote": "Vote now",
       "stats": {
-        "goodVotes": 12,
-        "badVotes": 4,
-        "lastVoteGood": false
+        "goodVotes": 17,
+        "badVotes": 6,
+        "lastVoteGood": true
       }
     }
   ]
