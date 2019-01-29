@@ -2,7 +2,7 @@
 
 This project was develop with vanilla JS (including CSS and HTM5) without any library or framework. Above the reasons why:
 
- -  The app it's satefy because we don't import, let say, a hundred dependencies and use only 3... But, what about the other 997?? Well, that's a security gap for our web app!! A huge one!!
+ -  The app it's satefy because we don't import, let say, a thousand dependencies and use only 3... But, what about the other 997?? Well, that's a security gap for our web app!! A huge one!!
  - If you use libraries or frameworks, you need to trust the author and if there is a bug, that's when the problems begins.
  - Vanilla JS will always have the best performance in a web application.
  - Also, i didn't choose CSS pre-processors or JS Frameworks in order to show my skills in pure JS and CSS.
@@ -17,6 +17,14 @@ So, we have to summarize:
  - Show skills in pure coding
 
 With all that say, let's see the dependencies in order to get the application run...
+
+## Responsive Design
+
+The web app have 3 differents designs:
+
+ - For laptops (screen width > 768px)
+ - For tablets (screen width <= 768px)
+ - For smartphones (screen width <= 425px)
 
 ## Dependencies:
 This project use Web Components, so we need some webpacket. Also, we use some full fake API REST service called  Typicode JSON Server in order to make HTTP Request.
